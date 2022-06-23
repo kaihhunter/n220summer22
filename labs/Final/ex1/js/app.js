@@ -92,26 +92,3 @@ function draw() {
   }
 }
 
-function keyReleased() {
-  if (continueGame) {
-    // Can user play?
-    if (key != " ") {
-      rocket.setDir(0); // Stop rocket movement
-    }
-  }
-}
-
-function keyPressed() {
-  if (continueGame) {
-    if (key === " ") {
-      var bullet = new Bullet(rocket.x, height - 80); // New bullet instance
-      bullets.push(bullet); // Add bullet to bullets array
-      ammo--; // Decrement ammunition
-    }
-    if (keyCode === RIGHT_ARROW) {
-      rocket.setDir(1); // Move rocket right
-    } else if (keyCode === LEFT_ARROW) {
-      rocket.setDir(-1); // Move rocket left
-    }
-  }
-}
