@@ -89,6 +89,6 @@ function draw() {
       // If bullet is destroyed
       bullets.splice(i, 1); // Remove bullet from bullets array
     }
-  }
+} 
 }
 
